@@ -1,0 +1,33 @@
+.mainDiv {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.search {
+  width: 100%;
+  background-color: white;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.search > input {
+  width: 60%;
+  width: 100%;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+.displayDiv {
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 400px;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  overflow-y: scroll;
+}
