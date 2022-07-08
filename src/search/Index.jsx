@@ -23,11 +23,9 @@ const Index = () => {
   }, [page]);
 
   const getData = () => {
-    axios
-      .get(configuration.BASE_URL.concat(`/?name=${query}&page=${page}`))
-      .then((data) => {
-        setData(data.data.results);
-      });
+    axios.get(configuration.BASE_URL).then((data) => {
+      setData(data.data.results);
+    });
   };
 
   //getting query from input
@@ -58,33 +56,6 @@ const Index = () => {
 
   //Pagination
 
-  // document.addEventListener("scroll", () => {
-  //   const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
-  //   if (scrollTop + clientHeight > scrollHeight) {
-  //     reloadData();
-  //     console.log("I am at Bottom");
-  //   }
-  // });
-  // const reloadData = () => {
-  //   setTimeout(() => {
-  //     setPage(page + 1);
-  //     getData();
-  //   }, 300);
-  // };
-
-  document.onscroll = function (ev) {
-    if (
-      document.innerHeight + document.scrollY >=
-      document.body.offsetHeight
-    ) {
-      // you're at the bottom of the page, load more content here.
-      setData(...data.data.results, ...data);
-      setPage(page + 1);
-      getData();
-      console.log("hello");
-    }
-  };
-  
   //Passing data to DetailCard
   const dataToIndex = (e) => {
     let curr = [...toDetail, e];

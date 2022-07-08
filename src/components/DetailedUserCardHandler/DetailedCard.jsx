@@ -1,3 +1,4 @@
+import CloseIcon from "@mui/icons-material/Close";
 import ReactDom from "react-dom";
 import styles from "./DetailedCard.module.css";
 
@@ -11,7 +12,7 @@ const DetailedCard = ({ open, toDetail, setIsOpen }) => {
     <>
       {toDetail.map((e) => (
         <div className={styles.overlay} onClick={handleClose}>
-          <div className={styles.DetailedCardOutline} onClick={handleClose}>
+          <div className={styles.DetailedCardOutline}>
             <div
               className={
                 styles.DetailedCardImageNameStatusColorStatusAndSpecies
@@ -24,6 +25,14 @@ const DetailedCard = ({ open, toDetail, setIsOpen }) => {
                 className={styles.DetailedCardNameStatusColorStatusAndSpecies}
               >
                 <div className={styles.DetailedCardName}>
+                  <CloseIcon
+                    style={{
+                      color: "grey",
+                      marginLeft: "170px",
+                      backgroundColor: "white",
+                    }}
+                    onClick={handleClose}
+                  ></CloseIcon>
                   <h3>{e.name}</h3>
                 </div>
                 <div className={styles.DetailedCardStatusColorStatusAndSpecies}>
