@@ -23,11 +23,12 @@
 .displayDiv {
   width: 100%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  height: 400px;
+  height: 280px;
   margin: auto;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
   overflow-y: scroll;
+  /* transform: translateY(0); */
 }
